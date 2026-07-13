@@ -3,56 +3,106 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bewellery Etoile</title>
+<title>Bewellery Etoile — Elegant Jewelry, Delivered</title>
+<meta name="description" content="Bewellery Etoile is a mobile shopping app for elegant jewelry, order tracking, and customer support." />
 <style>
   :root {
     --gold: #b8925a;
     --text-primary: #1c1c1c;
     --text-secondary: #55524d;
     --bg: #fdfcfb;
+    --border: #e8e3dc;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: var(--bg);
     color: var(--text-primary);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    text-align: center;
-    padding: 24px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
   }
   h1 {
     font-size: 32px;
-    margin-bottom: 8px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .tagline {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+  }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--gold);
+    padding-left: 12px;
   }
   p {
+    font-size: 16px;
     color: var(--text-secondary);
-    margin-bottom: 32px;
+    margin: 0 0 8px;
   }
-  .links a {
-    display: inline-block;
-    margin: 0 12px;
+  ul {
+    color: var(--text-secondary);
+    font-size: 16px;
+    padding-left: 20px;
+    margin: 0 0 8px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  a {
     color: var(--gold);
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+  }
+  footer a {
+    margin-right: 20px;
     font-weight: 600;
     text-decoration: none;
-    font-size: 16px;
   }
-  .links a:hover {
+  footer a:hover {
     text-decoration: underline;
   }
 </style>
 </head>
 <body>
-  <div>
+  <div class="container">
     <h1>Bewellery Etoile</h1>
-    <p>Elegant jewelry, delivered.</p>
-    <div class="links">
+    <p class="tagline">Elegant jewelry, delivered to your door.</p>
+
+    <h2>About the App</h2>
+    <p>Bewellery Etoile is a mobile shopping application that lets customers browse, purchase, and track orders for jewelry — including rings, necklaces, bracelets, and earrings — from the convenience of their phone.</p>
+
+    <h2>What You Can Do</h2>
+    <ul>
+      <li>Browse a curated catalogue of jewelry products with detailed descriptions and images</li>
+      <li>Create an account using email or Google Sign-In</li>
+      <li>Save favorite items to a wishlist</li>
+      <li>Place orders and pay securely online or choose cash on delivery</li>
+      <li>Track order status from confirmation through delivery</li>
+      <li>Leave reviews on products you've purchased</li>
+      <li>Contact customer support directly through in-app live chat</li>
+    </ul>
+
+    <h2>Who It's For</h2>
+    <p>Bewellery Etoile is built for customers in Ghana looking for a simple, trustworthy way to shop for jewelry online, with clear order tracking and responsive customer support at every step.</p>
+
+    <footer>
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms &amp; Conditions</a>
-    </div>
+    </footer>
   </div>
 </body>
 </html>
