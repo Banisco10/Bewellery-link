@@ -1,84 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bewellery Etoile — Elegant Jewelry, Delivered</title>
-<meta name="description" content="Bewellery Etoile is a mobile shopping app for elegant jewelry, order tracking, and customer support." />
-<style>
-  :root {
-    --gold: #b8925a;
-    --text-primary: #1c1c1c;
-    --text-secondary: #55524d;
-    --bg: #fdfcfb;
-    --border: #e8e3dc;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-  }
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0 0 8px;
-  }
-  .tagline {
-    font-size: 17px;
-    color: var(--text-secondary);
-    margin-bottom: 36px;
-  }
-  h2 {
-    font-size: 19px;
-    font-weight: 700;
-    margin-top: 32px;
-    margin-bottom: 10px;
-    border-left: 3px solid var(--gold);
-    padding-left: 12px;
-  }
-  p {
-    font-size: 16px;
-    color: var(--text-secondary);
-    margin: 0 0 8px;
-  }
-  ul {
-    color: var(--text-secondary);
-    font-size: 16px;
-    padding-left: 20px;
-    margin: 0 0 8px;
-  }
-  li {
-    margin-bottom: 6px;
-  }
-  a {
-    color: var(--gold);
-  }
-  footer {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    font-size: 15px;
-  }
-  footer a {
-    margin-right: 20px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  footer a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bewellery Etoile is a mobile shopping app for elegant jewelry, order tracking, and customer support.">
+  <title>Bewellery Etoile — Elegant Jewelry, Delivered</title>
+  <style>
+    :root { --primary:#8b6b45; --text:#292929; --muted:#666666; --background:#faf8f5; --surface:#ffffff; --border:#e8e1d8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; line-height:1.7; color:var(--text); background:var(--background); }
+    header { padding:28px 20px; text-align:center; background:var(--surface); border-bottom:1px solid var(--border); }
+    .brand { margin:0; color:var(--primary); font-family:Georgia,"Times New Roman",serif; font-size:2rem; letter-spacing:3px; }
+    header p { margin:8px 0 0; color:var(--muted); }
+    main { width:min(100% - 32px,800px); margin:40px auto; padding:32px; background:var(--surface); border:1px solid var(--border); border-radius:12px; }
+    h1 { font-family:Georgia,"Times New Roman",serif; font-size:2rem; line-height:1.3; }
+    h2 { margin-top:30px; color:var(--primary); font-size:1.25rem; }
+    a { color:var(--primary); overflow-wrap:anywhere; }
+    li { margin-bottom:10px; }
+    .tagline { color:var(--muted); font-size:1.05rem; }
+    .updated { color:var(--muted); font-size:.9rem; }
+    .legal-nav { margin-top:40px; padding-top:20px; border-top:1px solid var(--border); font-size:.95rem; }
+    .legal-nav a { margin-right:20px; font-weight:600; text-decoration:none; }
+    .legal-nav a:hover { text-decoration:underline; }
+    footer { padding:24px 16px; color:var(--muted); text-align:center; font-size:.9rem; }
+    @media (max-width:600px) { main { margin:20px auto; padding:22px 18px; } h1 { font-size:1.65rem; } }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <p class="brand">BEWELLERY</p>
+    <p>Timeless elegance. Personal style.</p>
+  </header>
+
+  <main>
     <h1>Bewellery Etoile</h1>
     <p class="tagline">Elegant jewelry, delivered to your door.</p>
 
@@ -99,12 +53,15 @@
     <h2>Who It's For</h2>
     <p>Bewellery Etoile is built for customers in Ghana looking for a simple, trustworthy way to shop for jewelry online, with clear order tracking and responsive customer support at every step.</p>
 
-    <footer>
+    <nav class="legal-nav">
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms &amp; Conditions</a>
       <a href="/refund-policy">Refund Policy</a>
       <a href="/delete-account">Account and Data Deletion</a>
-    </footer>
-  </div>
+    </nav>
+  </main>
+
+  <footer>&copy; <span id="year"></span> Bewellery. All rights reserved.</footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
