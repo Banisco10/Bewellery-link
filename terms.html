@@ -1,76 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Terms &amp; Conditions — Bewellery Etoile</title>
-<style>
-  :root {
-    --gold: #b8925a;
-    --text-primary: #1c1c1c;
-    --text-secondary: #55524d;
-    --bg: #fdfcfb;
-    --border: #e8e3dc;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-  }
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  header {
-    margin-bottom: 8px;
-  }
-  h1 {
-    font-size: 30px;
-    font-weight: 700;
-    margin: 0 0 8px;
-    color: var(--text-primary);
-  }
-  .updated {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 40px;
-  }
-  h2 {
-    font-size: 19px;
-    font-weight: 700;
-    margin-top: 36px;
-    margin-bottom: 10px;
-    color: var(--text-primary);
-    border-left: 3px solid var(--gold);
-    padding-left: 12px;
-  }
-  p {
-    font-size: 16px;
-    color: var(--text-secondary);
-    margin: 0 0 8px;
-  }
-  a {
-    color: var(--gold);
-  }
-  footer {
-    margin-top: 56px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    font-size: 14px;
-    color: var(--text-secondary);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions — Bewellery Etoile</title>
+  <style>
+    :root { --primary:#8b6b45; --text:#292929; --muted:#666666; --background:#faf8f5; --surface:#ffffff; --border:#e8e1d8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; line-height:1.7; color:var(--text); background:var(--background); }
+    header { padding:28px 20px; text-align:center; background:var(--surface); border-bottom:1px solid var(--border); }
+    .brand { margin:0; color:var(--primary); font-family:Georgia,"Times New Roman",serif; font-size:2rem; letter-spacing:3px; }
+    header p { margin:8px 0 0; color:var(--muted); }
+    main { width:min(100% - 32px,800px); margin:40px auto; padding:32px; background:var(--surface); border:1px solid var(--border); border-radius:12px; }
+    h1 { font-family:Georgia,"Times New Roman",serif; font-size:2rem; line-height:1.3; }
+    h2 { margin-top:30px; color:var(--primary); font-size:1.25rem; }
+    a { color:var(--primary); overflow-wrap:anywhere; }
+    li { margin-bottom:10px; }
+    .updated { color:var(--muted); font-size:.9rem; }
+    .legal-nav { margin-top:40px; padding-top:20px; border-top:1px solid var(--border); font-size:.95rem; }
+    .legal-nav a { margin-right:20px; font-weight:600; text-decoration:none; }
+    .legal-nav a:hover { text-decoration:underline; }
+    footer { padding:24px 16px; color:var(--muted); text-align:center; font-size:.9rem; }
+    @media (max-width:600px) { main { margin:20px auto; padding:22px 18px; } h1 { font-size:1.65rem; } }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Terms &amp; Conditions</h1>
-      <p class="updated">Last Updated: July 10, 2026</p>
-    </header>
+  <header>
+    <p class="brand">BEWELLERY</p>
+    <p>Timeless elegance. Personal style.</p>
+  </header>
+
+  <main>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="updated">Last Updated: July 10, 2026</p>
 
     <h2>1. Introduction</h2>
     <p>Welcome to Bewellery Etoile. These Terms &amp; Conditions govern your access and use of our mobile application and related services. By using the application, you agree to these terms.</p>
@@ -129,16 +91,20 @@
 
     <h2>16. Contact Us</h2>
     <p>
-      Bewellery Etoile<br />
-      Accra, Ghana<br />
-      Email: <a href="mailto:Bewellery09@gmail.com">Bewellery09@gmail.com</a> <br />
-       Contact: <a href="tel:+233509865526">0509865526</a>
+      Bewellery Etoile<br>
+      Accra, Ghana<br>
+      Email: <a href="mailto:Bewellery09@gmail.com">Bewellery09@gmail.com</a><br>
+      Contact: <a href="tel:+233509865526">0509865526</a>
     </p>
 
-    <footer>
+    <nav class="legal-nav">
       <a href="/privacy">Privacy Policy</a>
       <a href="/refund-policy">Refund Policy</a>
-    </footer>
-  </div>
+       <a href="/delete-account">Account and Data Deletion</a>
+    </nav>
+  </main>
+
+  <footer>&copy; <span id="year"></span> Bewellery. All rights reserved.</footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
